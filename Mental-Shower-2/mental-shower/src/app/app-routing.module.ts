@@ -14,7 +14,23 @@ const routes: Routes = [
   {
     path: 'floors',
     loadChildren: () => import('./floors/floors.module').then( m => m.FloorsPageModule)
+  },  {
+    path: 'rooms',
+    loadChildren: () => import('./rooms/rooms.module').then( m => m.RoomsPageModule)
+  },
+  {
+    path: 'quiz',
+    loadChildren: () => import('./quiz/quiz.module').then( m => m.QuizPageModule)
+  },
+  {
+    path: 'zones',
+    loadChildren: () => import('./zones/zones.module').then( m => m.ZonesPageModule)
+  },
+  {
+    path: 'learn',
+    loadChildren: () => import('./learn/learn.module').then( m => m.LearnPageModule)
   }
+
 ];
 
 @NgModule({
