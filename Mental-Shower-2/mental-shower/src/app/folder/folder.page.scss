@@ -1,5 +1,5 @@
 ion-menu-button {
-  color: var(--ion-color-primary);
+  color: var(--ion-color-success);
 }
 
 #container {
@@ -25,4 +25,12 @@ ion-menu-button {
 
 #container a {
   text-decoration: none;
+}
+
+.item .sc-ion-label-ios-h{
+  color: black;
+}
+
+.ionicon, svg{
+  color: black;
 }
