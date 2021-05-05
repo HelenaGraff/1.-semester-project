@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import {LearnModalPage} from 'src/app/learn/learn-modal/learn-modal.page';
 
 @Component({
   selector: 'app-learn',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LearnPage implements OnInit {
 
-  constructor() { }
+  constructor(public modalController: ModalController) {
+
+   }
 
   ngOnInit() {
   }
-
+  async testClick(){
+    const modal = await this.modalController.create({
+      component: LearnModalPage,
+      cssClass: 'my-custom-class'
+    });
+    return await modal.present();
+  }
 }

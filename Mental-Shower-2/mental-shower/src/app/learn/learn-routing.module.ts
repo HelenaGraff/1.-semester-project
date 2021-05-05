@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: LearnPage
+  },  {
+    path: 'learn-modal',
+    loadChildren: () => import('./learn-modal/learn-modal.module').then( m => m.LearnModalPageModule)
   }
+
 ];
 
 @NgModule({
