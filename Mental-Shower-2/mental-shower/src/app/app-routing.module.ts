@@ -12,25 +12,29 @@ const routes: Routes = [
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
-    path: 'floors',
-    loadChildren: () => import('./floors/floors.module').then( m => m.FloorsPageModule)
-  },  {
-    path: 'rooms',
-    loadChildren: () => import('./rooms/rooms.module').then( m => m.RoomsPageModule)
-  },
-  {
-    path: 'quiz',
-    loadChildren: () => import('./quiz/quiz.module').then( m => m.QuizPageModule)
+    path: 'connect',
+    loadChildren: () => import('./connect/connect.module').then( m => m.ConnectPageModule)
   },
   {
     path: 'zones',
     loadChildren: () => import('./zones/zones.module').then( m => m.ZonesPageModule)
   },
   {
+    path: 'card',
+    loadChildren: () => import('./card/card.module').then( m => m.CardPageModule)
+  }
+  ,{
     path: 'learn',
     loadChildren: () => import('./learn/learn.module').then( m => m.LearnPageModule)
   }
-
+  ,{
+    path: 'quiz',
+    loadChildren: () => import('./quiz/quiz.module').then( m => m.QuizPageModule)
+  },
+  {
+    path:'notifications',
+    loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
+  }
 ];
 
 @NgModule({

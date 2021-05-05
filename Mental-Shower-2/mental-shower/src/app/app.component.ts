@@ -6,11 +6,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Floors', url: '/folder/Floors', icon: 'business' },
-    { title: 'Rooms', url: '/folder/Rooms', icon: 'location' },
-    { title: 'Zones', url: '/folder/Zones', icon: 'grid' },
-    { title: 'Quiz', url: '/folder/Quiz', icon: 'reader' },
-    { title: 'Learn', url: '/folder/Learn', icon: 'bulb' },
+    { title: 'Connect', url: 'connect', icon: 'radio' },
+    { title: 'Mood', url: 'quiz', icon: 'happy' },
+    { title: 'Zones', url: 'zones', icon: 'grid' },
+    
+    { title: 'Learn', url: 'learn', icon: 'bulb' },
+    { title: 'Card', url: 'card', icon: 'card' },
+   
+   
+    
+
+    { title: 'Notifications', url: 'notifications', icon: 'notifications' },
   ];
   //public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}

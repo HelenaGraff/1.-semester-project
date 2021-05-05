@@ -8,9 +8,17 @@
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-icon style="width: 25px; height: 25px;" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
+              <ion-item-group style="position:relative; overflow: hidden"  *ngIf="p.title=='Notifications'">
+               
+              <ion-toggle class="notification-toggle"></ion-toggle>
+            
+              </ion-item-group>
             </ion-item>
+
+           
+            
           </ion-menu-toggle>
         </ion-list>
 
