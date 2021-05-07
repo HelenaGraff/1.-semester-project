@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-
+import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-learn-modal',
@@ -8,6 +8,19 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./learn-modal.page.scss'],
 })
 export class LearnModalPage implements OnInit {
+
+  responses = [
+  "I am tired",
+  "I am anxious",
+  
+  "I am sleepy",
+  " I feel dehydrated"
+  ];
+
+  answers = [
+   
+  ];
+
 
   constructor(private modalController:ModalController) { }
 
@@ -18,4 +31,16 @@ export class LearnModalPage implements OnInit {
     console.log("hello");
 this.modalController.dismiss();
   }
+
+  drop(event: CdkDragDrop<string[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(event.previousContainer.data,
+                        event.container.data,
+                        event.previousIndex,
+                        event.currentIndex);
+    }
+  }
+
 }

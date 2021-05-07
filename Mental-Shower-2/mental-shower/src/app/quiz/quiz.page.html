@@ -12,4 +12,45 @@
 </ion-header>
 <ion-content>
 
+  <div cdkDropListGroup>
+    <ion-card cdkDropList   [cdkDropListData]="todo" (cdkDropListDropped)="drop($event)"> 
+      <div *ngFor="let item of todo" cdkDrag>
+
+        {{item}}
+      </div>
+    </ion-card>
+
+    <ion-card cdkDropList   [cdkDropListData]="done"  (cdkDropListDropped)="drop($event)">
+      <div *ngFor="let item of done" cdkDrag>
+        {{item}}
+      </div>
+    </ion-card>
+  </div>  
+  <!------------------------------------------------>
+
+  <div cdkDropListGroup>
+    <div class="example-container">
+      <h2>To do</h2>
+  
+      <div
+        cdkDropList
+        [cdkDropListData]="todo"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+  
+    <div class="example-container">
+      <h2>Done</h2>
+  
+      <div
+        cdkDropList
+        [cdkDropListData]="done"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+  </div>
 </ion-content>

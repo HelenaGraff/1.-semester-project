@@ -15,31 +15,24 @@
                                 <img src="assets/windowOpen.gif">
                               </ion-card>
                   </ion-slide>
-                  <ion-slide>
-
+                  <ion-slide cdkDropListGroup>
+                    <ion-card >
                    <p> How can high CO2 levels affect your health? </p>
-                                  <ion-card class="response" cdkDrag>
-                                    I lose concentration easily
+                                  <ion-item cdkDropList  [cdkDropListData]="responses" (cdkDropListDropped)="drop($event)"  >
+                                  <ion-card *ngFor="let item of responses" class="response"  cdkDrag >
+                                    {{item}}
                                 
                                   </ion-card>
-                                  <br>
-                                  <ion-card class="response" cdkDrag>
-                                    I am tired
-                                  </ion-card>
-                                  <br>
-                                  <ion-card class="response" cdkDrag>
-                                    I am anxious
-                                  </ion-card>
-                                  <br>
-                                  <ion-card class="response" cdkDrag>
-                                    I am sleepy
-                                  </ion-card>
-                                  <br>
-                                  <ion-card class="response" cdkDrag>
-                                    I feel dehydrated
-                                  </ion-card>
-
-                                  <ion-button>blablabla</ion-button>
+                                 
+                               
+                                </ion-item>
+                                  <ion-item cdkDropList [cdkDropListData]="answers"  (cdkDropListDropped)="drop($event)" >
+                                    <ion-card *ngFor="let item of answers" class="response"  cdkDrag >
+                                      {{item}}
+                                  
+                                    </ion-card>
+                                </ion-item>
+                                </ion-card>
                   </ion-slide>
           </ion-slides>
 </ion-content>
