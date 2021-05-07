@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { LearnModalPageRoutingModule } from './learn-modal-routing.module';
 
 import { LearnModalPage } from './learn-modal.page';
+import { DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LearnModalPageRoutingModule
+    LearnModalPageRoutingModule,
+    DragDropModule
   ],
   declarations: [LearnModalPage]
 })
