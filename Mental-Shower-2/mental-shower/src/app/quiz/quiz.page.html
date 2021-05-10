@@ -14,10 +14,16 @@
 
 
  <quiz-zone question="How are you doing today?" [answers]='answers1' [responses]='responses1'></quiz-zone>
- <quiz-zone *ngIf="responses1.includes('Not Good')" question="What's up?" [answers]='answers2' [responses]='responses2'></quiz-zone>
+ <quiz-zone *ngIf="responses1.includes('Not Good')" question="What's wrong?" [answers]='answers2' [responses]='responses2'></quiz-zone>
  <ion-button *ngIf="responses1.includes('Great')">Continue to zones</ion-button>
   <!------------------------------------------------>
+  <quiz-zone *ngIf="responses2.includes('Temperature')" question="Please choose from the following options that best describes your current state:" [answers]='answers3' [responses]='responses3'></quiz-zone>
+  <ion-button *ngIf="responses2.includes('Smell')">Continue to zones</ion-button>
+  <ion-button *ngIf="responses2.includes('Wet')">Continue to zones</ion-button>
+  <ion-button *ngIf="responses2.includes('Dry')">Continue to zones</ion-button>
+  <ion-button *ngIf="responses2.includes('Headache')">Continue to zones</ion-button>
 
-  
-
+  <ion-button *ngIf="responses3.includes('Feeling hot')">Continue to zones</ion-button>
+  <ion-button *ngIf="responses3.includes('Feeling cold')">Continue to zones</ion-button>
+  <ion-button *ngIf="responses3.includes('Feeling okay')">Continue to zones</ion-button>
 </ion-content>
