@@ -13,15 +13,17 @@ export class QuizPage implements OnInit {
   }
 
   todo=[
- "blabla",
- "blabla2"
+ "energized",
+ "lazy",
+ "dizzy",
+ "cold",
+ "hot",
+ "wet",
+ "dry",
+ "alright"
   ]
   done = [
-    'Get up',
-    'Brush teeth',
-    'Take a shower',
-    'Check e-mail',
-    'Walk dog'
+  
   ];
 
   drop(event: CdkDragDrop<string[]>) {

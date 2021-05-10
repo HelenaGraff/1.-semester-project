@@ -12,25 +12,11 @@
 </ion-header>
 <ion-content>
 
-  <div cdkDropListGroup>
-    <ion-card cdkDropList   [cdkDropListData]="todo" (cdkDropListDropped)="drop($event)"> 
-      <div *ngFor="let item of todo" cdkDrag>
-
-        {{item}}
-      </div>
-    </ion-card>
-
-    <ion-card cdkDropList   [cdkDropListData]="done"  (cdkDropListDropped)="drop($event)">
-      <div *ngFor="let item of done" cdkDrag>
-        {{item}}
-      </div>
-    </ion-card>
-  </div>  
   <!------------------------------------------------>
 
   <div cdkDropListGroup>
     <div class="example-container">
-      <h2>To do</h2>
+      <h2>How are you feeling today?</h2>
   
       <div
         cdkDropList
@@ -42,7 +28,7 @@
     </div>
   
     <div class="example-container">
-      <h2>Done</h2>
+      <h2>Your Answer</h2>
   
       <div
         cdkDropList
@@ -53,4 +39,65 @@
       </div>
     </div>
   </div>
+
+  <div class="example-container">
+    <h2>What could be improved?</h2>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="todo"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>What is your temperature right now?</h2>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="todo"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>What is your prefered temperature?</h2>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="todo"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>How is the air quality in the room?</h2>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="todo"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>About humidity</h2>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="todo"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
 </ion-content>
