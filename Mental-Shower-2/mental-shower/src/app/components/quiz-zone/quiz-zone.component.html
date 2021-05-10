@@ -4,6 +4,7 @@
 
     <ion-card class="answerCard"
       cdkDropList
+      orientation="horizontal"
       [cdkDropListData]="answers"
    
       (cdkDropListDropped)="drop($event)">
@@ -18,6 +19,7 @@
 
     <ion-card class="answerCard"
       cdkDropList
+      orientation="horizontal"
       [cdkDropListData]="responses"
       
       (cdkDropListDropped)="drop($event)">
