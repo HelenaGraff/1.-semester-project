@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { IonicModule } from '@ionic/angular';
-
+import {QuizZoneComponent} from 'src/app/components/quiz-zone/quiz-zone.component';
 import { QuizPageRoutingModule } from './quiz-routing.module';
 
 import { QuizPage } from './quiz.page';
@@ -16,6 +16,6 @@ import { QuizPage } from './quiz.page';
     QuizPageRoutingModule,
     DragDropModule
   ],
-  declarations: [QuizPage]
+  declarations: [QuizPage,QuizZoneComponent]
 })
 export class QuizPageModule {}

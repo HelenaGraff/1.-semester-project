@@ -1,41 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+
+
 @Component({
-  selector: 'app-quiz',
-  templateUrl: './quiz.page.html',
-  styleUrls: ['./quiz.page.scss'],
+  selector: 'quiz-zone',
+  templateUrl: './quiz-zone.component.html',
+  styleUrls: ['./quiz-zone.component.scss'],
 })
-export class QuizPage implements OnInit {
-
-  constructor() { 
-    
-  }
-
-  ngOnInit() {
-  }
-  answers1=[
-    'Great',
-    'Not Good'
-    ]
-    responses1=[
-      
-      ]
-      answers2=[
-        'Temperature',
-        'Smell'  , 'My head',
-        'Wet'
-        ]
-        responses2=[
-          
-          ]
+export class QuizZoneComponent implements OnInit {
+  
+  @Input("question") question:string[];
+  @Input("answers") answers:string[];
+  @Input("responses") responses:string[];
 
 
+  
+  constructor() { }
 
-
-
-
- 
-
+  ngOnInit() {}
+  
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
