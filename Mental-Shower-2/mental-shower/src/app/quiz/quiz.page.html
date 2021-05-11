@@ -17,6 +17,8 @@
  <quiz-zone *ngIf="responses1.includes('Not Good')" question="What's up?" [answers]='answers2' [responses]='responses2'></quiz-zone>
  <ion-button *ngIf="responses1.includes('Great')" class="proceedBtn">Continue to zones</ion-button>
  
+ <quiz-zone *ngIf="responses1.includes('Not Good')" question="What's wrong?" [answers]='answers2' [responses]='responses2'></quiz-zone>
+ <ion-button *ngIf="responses1.includes('Great')">Continue to zones</ion-button>
   <!------------------------------------------------>
   <quiz-zone *ngIf="responses2.includes('Temperature')" question="Please choose from the following options that best describes your current state:" [answers]='answers3' [responses]='responses3'></quiz-zone>
   <ion-button *ngIf="responses2.includes('Smell')">Continue to zones</ion-button>

@@ -22,14 +22,22 @@ export class QuizPage implements OnInit {
       ]
       answers2=[
         'Temperature',
-        'Smell'  , 'My head',
-        'Wet'
+        'Smell', 
+        'Headache',
+        'Wet',
+        'Dry'
         ]
         responses2=[
           
           ]
+          answers3=[
+            'Feeling hot',
+            'Feeling cold',
+            'Feeling okay'
+            ]
+            responses3=[
 
-
+            ]
 
 
 
