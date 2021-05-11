@@ -4,13 +4,17 @@
 }
 .answerBubble{
   height: 35px;
-  width: 35%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 5%;
   background-color: black;
   color: white;
+}
+.answerBubble.cdk-drag-disabled{
+    background: rgb(117, 117, 117);
+  cursor: default;
 }
 
 h2{

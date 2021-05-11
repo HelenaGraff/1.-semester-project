@@ -8,8 +8,9 @@
     display: block !important;
 }
 
-ion-button::part(native){
-    background-color: black;
+ion-button{
+    --background: black;
+    --background-activated:gray;
 }
 
 h2{

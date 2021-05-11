@@ -4,12 +4,28 @@
 
     <ion-card class="answerCard"
       cdkDropList
-      orientation="horizontal"
+      orientation="vertical"
       [cdkDropListData]="answers"
    
       (cdkDropListDropped)="drop($event)">
       <h2> {{question}}</h2>
-      <ion-card class="answerBubble" *ngFor="let item of answers" cdkDrag>{{item}}</ion-card>
+      <div  *ngFor="let item of answers" >
+        <ion-card class="answerBubble" 
+       
+        
+        cdkDrag [cdkDragDisabled]="
+        (item=='Feeling hot' && !answers.includes('Feeling cold'))  ||
+        (item=='Feeling cold' && !answers.includes('Feeling hot'))  ||
+        (item=='I feel like it is wet' && !answers.includes('I feel like it is dry')) ||
+        (item=='I feel like it is dry' && !answers.includes('I feel like it is wet')) ||
+        (item=='Not Good' && !answers.includes('Great')) 
+        ">
+
+
+        {{item}}
+      </ion-card>
+      
+      </div>
     </ion-card>
   </div>
   
@@ -25,7 +41,7 @@
       (cdkDropListDropped)="drop($event)">
       <H2>Your answer(s)</H2>
      
-      <ion-card class="answerBubble" *ngFor="let item of responses" cdkDrag>{{item}}</ion-card>
+      <ion-card class="answerBubble" *ngFor="let item of responses" cdkDrag >{{item}}</ion-card>
     </ion-card>
   </div>
 </ion-card>

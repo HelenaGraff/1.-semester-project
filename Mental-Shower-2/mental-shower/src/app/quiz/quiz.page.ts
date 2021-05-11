@@ -21,19 +21,19 @@ export class QuizPage implements OnInit {
       
       ]
       answers2=[
-        'Temperature',
-        'Smell', 
-        'Headache',
-        'Wet',
-        'Dry'
+        'Feeling hot',
+            'Feeling cold',
+        'It smells bad', 
+        'I have a headache',
+        'I feel like it is wet',
+        'I feel like it is dry'
         ]
         responses2=[
           
           ]
           answers3=[
-            'Feeling hot',
-            'Feeling cold',
-            'Feeling okay'
+            
+            
             ]
             responses3=[
 
@@ -45,6 +45,8 @@ export class QuizPage implements OnInit {
  
 
   drop(event: CdkDragDrop<string[]>) {
+    console.log("event container data:"+event.container.data);
+    
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {

@@ -13,14 +13,23 @@ export class QuizZoneComponent implements OnInit {
   @Input("answers") answers:string[];
   @Input("responses") responses:string[];
 
-
+dragDisabled:boolean;
   
   constructor() { }
 
   ngOnInit() {}
   
   drop(event: CdkDragDrop<string[]>) {
+    console.log("event container data:"+event.container.data);
+    console.log("event container item:"+event.item.element.nativeElement.textContent);
+    
+
+    if  (event.item.element.nativeElement.textContent=="I feel like it is dry"){
+      this.dragDisabled=true;
+    }
+
     if (event.previousContainer === event.container) {
+      
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
       transferArrayItem(event.previousContainer.data,
