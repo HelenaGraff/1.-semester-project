@@ -19,12 +19,12 @@
  
   <!------------------------------------------------>
   <quiz-zone *ngIf="responses2.includes('Temperature')" question="Please choose from the following options that best describes your current state:" [answers]='answers3' [responses]='responses3'></quiz-zone>
-  <ion-button *ngIf="responses2.includes('Smell')">Continue to zones</ion-button>
-  <ion-button *ngIf="responses2.includes('Wet')">Continue to zones</ion-button>
-  <ion-button *ngIf="responses2.includes('Dry')">Continue to zones</ion-button>
-  <ion-button *ngIf="responses2.includes('Headache')">Continue to zones</ion-button>
+  <ion-button *ngIf="responses2.includes('Smell')" class="proceedBtn">Continue to zones</ion-button>
+  <ion-button *ngIf="responses2.includes('Wet')"class="proceedBtn">Continue to zones</ion-button>
+  <ion-button *ngIf="responses2.includes('Dry')"class="proceedBtn">Continue to zones</ion-button>
+  <ion-button *ngIf="responses2.includes('Headache')"class="proceedBtn">Continue to zones</ion-button>
 
-  <ion-button *ngIf="responses3.includes('Feeling hot')">Continue to zones</ion-button>
-  <ion-button *ngIf="responses3.includes('Feeling cold')">Continue to zones</ion-button>
-  <ion-button *ngIf="responses3.includes('Feeling okay')">Continue to zones</ion-button>
+  <ion-button *ngIf="responses3.includes('Feeling hot')"class="proceedBtn">Continue to zones</ion-button>
+  <ion-button *ngIf="responses3.includes('Feeling cold')"class="proceedBtn">Continue to zones</ion-button>
+  <ion-button *ngIf="responses3.includes('Feeling okay')"class="proceedBtn">Continue to zones</ion-button>
 </ion-content>
