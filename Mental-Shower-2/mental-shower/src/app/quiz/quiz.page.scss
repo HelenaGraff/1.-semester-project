@@ -1,3 +1,13 @@
 .button-inner{
     color: black;
 }
+
+.proceedBtn{
+    margin-left: 25%;
+    margin-right: 25%;
+    display: block !important;
+}
+
+ion-button::part(native){
+    background-color: black;
+}

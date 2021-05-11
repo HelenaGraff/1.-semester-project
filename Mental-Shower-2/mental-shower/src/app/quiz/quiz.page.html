@@ -15,7 +15,7 @@
 
  <quiz-zone question="How are you doing today?" [answers]='answers1' [responses]='responses1'></quiz-zone>
  <quiz-zone *ngIf="responses1.includes('Not Good')" question="What's up?" [answers]='answers2' [responses]='responses2'></quiz-zone>
- <ion-button *ngIf="responses1.includes('Great')">Continue to zones</ion-button>
+ <ion-button *ngIf="responses1.includes('Great')" class="proceedBtn">Continue to zones</ion-button>
   <!------------------------------------------------>
 
   
