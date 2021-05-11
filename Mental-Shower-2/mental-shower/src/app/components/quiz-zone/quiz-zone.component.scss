@@ -1,18 +1,15 @@
 .answerCard{
   min-height: 100px;
- 
 
 }
 .answerBubble{
-    height: 50px;
-    width:120px;
-    display: inline;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    margin-left: 5%;
-    background-color: peachpuff;
+  height: 35px;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5%;
+  background-color: #aedbaa;
 
 }
 h2{
