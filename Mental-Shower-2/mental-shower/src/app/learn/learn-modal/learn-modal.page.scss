@@ -7,3 +7,16 @@ text-align: center;
 align-items: center;
 align-content: center;
 }
+
+ ion-button::part(native){
+    background-color: black;
+}
+
+ion-button::part(native){
+    background-color: black;
+}
+
+.closeButton {
+    color: white;
+    --background-activated: grey;
+}
