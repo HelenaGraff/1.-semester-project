@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+import { JsonPipe } from '@angular/common';
+
 
 
 @Component({
@@ -9,9 +11,10 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 })
 export class LearnQuizComponent implements OnInit {
 
-  @Input("question") question:string[];
+  @Input("question") question:string;
   @Input("answers") answers:string[];
   @Input("responses") responses:string[];
+  @Input("correctAnswers") correctAnswers:string[];
 
   dragDisabled:boolean;
 
@@ -32,5 +35,9 @@ export class LearnQuizComponent implements OnInit {
                         event.previousIndex,
                         event.currentIndex);
     }
+
+    if (JSON.stringify (this.answers) === JSON.stringify (this.correctAnswers)){console.log ('Hurray')}
   }
+
 }
+

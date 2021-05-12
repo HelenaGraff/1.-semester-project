@@ -9,7 +9,7 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 })
 export class QuizZoneComponent implements OnInit {
   
-  @Input("question") question:string[];
+  @Input("question") question:string;
   @Input("answers") answers:string[];
   @Input("responses") responses:string[];
 
