@@ -1,0 +1,33 @@
+.answerCard{
+    min-height: 100px;
+  
+  }
+  .answerBubble{
+    height: 35px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    background-color: black;
+    color: white;
+  }
+  .answerBubble.cdk-drag-disabled{
+      background: rgb(117, 117, 117);
+    cursor: default;
+  }
+  
+  h2{
+      margin-left: 5%;
+      font-size: 20px;
+      color: black;
+  }
+  
+  .button-inner{
+    color:black;
+  }
+  
+  .dragDropCard{
+    background-color:#6EA81A;
+  
+  }
