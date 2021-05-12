@@ -1,12 +1,12 @@
-<p>New</p>
+
 
 <ion-card class="notifications">
   <p class="notifications-content">
-   The CO2 level is too high! <br/> 
-   Quick fix: Open the window.
+   {{notificationBody}} <br/> 
+   {{quickFix}}
   </p>
   <p class="notifications-time">
-    1 min ago
+    {{minsAgo}} min ago
   </p>
 
 
@@ -16,47 +16,3 @@
 
 </ion-card>
 
-<ion-card class="notifications">
-
-  <p class="notifications-content">
-    You have now joined zone 1.
-  </p>
-  <p class="notifications-time">
-    4 min ago
-  <ion-avatar>
-    <img class="notifications-logo" src="assets/notifications-outline.svg">
-  </ion-avatar>
-</ion-card>
-
-
-<ion-card class="notifications">
-
-  <p class="notifications-content">
-    Hi Andreea. You have signed in in classroom D3.16 London.
-  </p>
-  <p class="notifications-time">
-    5 min ago
-  <ion-avatar>
-    <img class="notifications-logo" src="assets/notifications-outline.svg">
-  </ion-avatar>
-
-  <ion-button>Confirm</ion-button>
-  <ion-button class="DenyBtn">Deny</ion-button>
-</ion-card>
-
-
-<p>Previous</p>
-
-<ion-card class="notifications">
-
-  <p class="notifications-content">
-    Hi Andreea. You have signed in in classroom D2.08 Paris.
-  </p>
-  <p class="notifications-time">
-    24H ago
-  <ion-avatar>
-    <img class="notifications-logo" src="assets/notifications-outline.svg">
-  </ion-avatar>
-  <ion-button class="DenyBtn">Confirmed</ion-button>
-
-</ion-card>
