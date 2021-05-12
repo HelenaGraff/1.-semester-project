@@ -1,0 +1,37 @@
+<ion-card cdkDropListGroup class="dragDropCard">
+  <div >
+    
+    <ion-card class="answerCard"
+      cdkDropList
+      orientation="vertical"
+      [cdkDropListData]="answers"
+      
+      (cdkDropListDropped)="drop($event)">
+      <h2> {{question}}</h2>
+      <div  *ngFor="let item of answers" >
+        <ion-card class="answerBubble" >
+       
+
+        {{item}}
+      </ion-card>
+      
+      </div>
+    </ion-card>
+  </div>
+  
+
+  <div >
+    
+
+    <ion-card class="answerCard"
+      cdkDropList
+      orientation="horizontal"
+      [cdkDropListData]="responses"
+      
+      (cdkDropListDropped)="drop($event)">
+      <H2>Your answer(s)</H2>
+     
+      <ion-card class="answerBubble" *ngFor="let item of responses" cdkDrag >{{item}}</ion-card>
+    </ion-card>
+  </div>
+</ion-card>

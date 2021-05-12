@@ -15,24 +15,9 @@
                                 <img src="assets/windowOpen.gif">
                               </ion-card>
                   </ion-slide>
-                  <ion-slide cdkDropListGroup>
-                    <ion-card >
-                   <p> How can high CO2 levels affect your health? </p>
-                                  <ion-item cdkDropList  [cdkDropListData]="responses" (cdkDropListDropped)="drop($event)"  >
-                                  <ion-card *ngFor="let item of responses" class="response"  cdkDrag >
-                                    {{item}}
-                                
-                                  </ion-card>
-                                 
-                               
-                                </ion-item>
-                                  <ion-item cdkDropList [cdkDropListData]="answers"  (cdkDropListDropped)="drop($event)" >
-                                    <ion-card *ngFor="let item of answers" class="response"  cdkDrag >
-                                      {{item}}
-                                  
-                                    </ion-card>
-                                </ion-item>
-                                </ion-card>
+                  <ion-slide>
+<app-learn-quiz> something </app-learn-quiz>
+
                   </ion-slide>
           </ion-slides>
 </ion-content>
