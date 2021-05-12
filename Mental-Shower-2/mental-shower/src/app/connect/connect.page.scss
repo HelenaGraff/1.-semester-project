@@ -1,3 +1,22 @@
 .button-inner{
     color:black;
 }
+
+.nearReaderImg{
+    height: 70px;
+    margin-left: 125px;
+}
+
+p{
+    margin-left: 125px;
+}
+
+.Info{
+    margin-left: 60px;
+}
+
+ion-button::part(native){
+    margin-left: 93px;
+    background-color: black;
+    --background-activated: grey;
+}
