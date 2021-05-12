@@ -1,7 +1,8 @@
 <ion-card cdkDropListGroup class="dragDropCard">
   <div >
     
-    <ion-card class="answerCard"
+    <ion-card
+      style="min-height: 100px;"
       cdkDropList
       orientation="vertical"
       [cdkDropListData]="answers"
@@ -32,6 +33,7 @@
       <H2>Your answer(s):</H2>
      
       <ion-card class="answerBubble" *ngFor="let item of responses" cdkDrag >{{item}}</ion-card>
+      <audio *ngIf="success" autoplay src="assets/success.mp3" ></audio>
     </ion-card>
   </div>
 </ion-card>

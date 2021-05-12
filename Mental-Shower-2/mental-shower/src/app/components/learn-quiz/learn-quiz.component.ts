@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import { JsonPipe } from '@angular/common';
-
+import {createAnimation, Animation} from '@ionic/core'
 
 
 @Component({
@@ -16,6 +16,7 @@ export class LearnQuizComponent implements OnInit {
   @Input("responses") responses:string[];
   @Input("correctAnswers") correctAnswers:string[];
 
+  success:boolean;
   dragDisabled:boolean;
 
   constructor() { }
@@ -36,8 +37,19 @@ export class LearnQuizComponent implements OnInit {
                         event.currentIndex);
     }
 
-    if (JSON.stringify (this.answers) === JSON.stringify (this.correctAnswers)){console.log ('Hurray')}
+    console.log("answers:"+JSON.stringify (this.answers));
+    console.log("responses:"+JSON.stringify (this.responses));
+    console.log("correct answers:"+JSON.stringify (this.correctAnswers));
+
+    if (JSON.stringify(this.responses.sort()) === JSON.stringify(this.correctAnswers.sort())){
+      
+      this.success=true;
+      createAnimation().addElement(document.querySelector(".answerCard")).duration(500).iterations(1).keyframes([{offset:0,background:'white'},{offset:1,background:'#c2ff68'}]).play({sync:false})
+    }
   }
+
+
+  
 
 }
 
