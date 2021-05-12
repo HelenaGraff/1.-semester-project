@@ -5,8 +5,32 @@
 
 ion-toggle{
     --background-checked: #6EA81A;
+    --handle-background-checked:white;
 }
 
 .button-inner{
     color:black;
+}
+
+.notifications{
+    height: 10%;
+    background-color: rgb(247, 255, 240);
+}
+
+.notifications-logo{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.notifications-content{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.notifications-time{
+    margin-left: 50px;
+    margin-top: -5px;
 }
