@@ -11,7 +11,7 @@ describe('LearnModalPage', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ LearnModalPage ],
-      imports: [IonicModule.forRoot(), LearnQuizComponent]
+      imports: [IonicModule.forRoot()]
     }).compileComponents();
 
     fixture = TestBed.createComponent(LearnModalPage);

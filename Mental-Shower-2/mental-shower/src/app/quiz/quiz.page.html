@@ -33,7 +33,7 @@
   <ion-button *ngIf="responses3.includes('Feeling okay')"class="proceedBtn">Continue to zones</ion-button>
 ----->                                                                                                                
 
-<ion-button class="proceedBtn" src="src/app/zones" *ngIf="
+<ion-button class="proceedBtn" routerLink="/zones" *ngIf="
 responses2.includes('It smells bad') ||
 responses1.includes('Great')||
  responses2.includes('Wet') ||

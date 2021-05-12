@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { LearnModalPageRoutingModule } from './learn-modal-routing.module';
+import {LearnQuizComponent} from 'src/app/components/learn-quiz/learn-quiz.component';
 
 import { LearnModalPage } from './learn-modal.page';
 import { DragDropModule} from '@angular/cdk/drag-drop';
@@ -17,6 +18,6 @@ import { DragDropModule} from '@angular/cdk/drag-drop';
     LearnModalPageRoutingModule,
     DragDropModule
   ],
-  declarations: [LearnModalPage]
+  declarations: [LearnModalPage,LearnQuizComponent]
 })
 export class LearnModalPageModule {}
