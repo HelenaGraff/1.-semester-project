@@ -1,0 +1,55 @@
+.notification.header{
+    text-align: center;
+    padding-top: 8px;
+}
+
+ion-toggle{
+    --background-checked: #6EA81A;
+    --handle-background-checked:white;
+}
+
+.button-inner{
+    color:black;
+}
+
+.notifications{
+    height: auto;
+    background-color: rgb(215, 247, 174);
+}
+
+.notifications-logo{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.notifications-content{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.notifications-time{
+    margin-left: 50px;
+    margin-top: -5px;
+}
+
+p{
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+ion-button{
+    margin-top: -50px;
+}
+
+ion-button::part(native){
+    background-color: black;
+    --background-activated: grey;
+}
+
+.DenyBtn::part(native){
+    background-color: rgb(192, 192, 192);
+    --background-activated: rgb(231, 231, 231);
+}
