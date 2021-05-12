@@ -4,10 +4,19 @@
   <p class="notifications-content">
    {{notificationBody}} <br/> 
    {{quickFix}}
-  </p>
-  <p class="notifications-time">
-    {{minsAgo}} min ago
-  </p>
+  </p> 
+
+  <div class="notifications-time">
+    <div *ngIf="minsEmpty">
+      {{minsAgo}} min ago
+    </div> 
+
+    <div *ngIf="!minsEmpty">
+      {{hoursAgo}} H ago
+    </div> 
+  </div>
+
+  <ion-button *ngIf="showButton" value="Confirmed">{{buttonContent}}</ion-button>
 
 
   <ion-avatar>

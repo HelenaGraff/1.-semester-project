@@ -15,7 +15,16 @@
 
 <ion-content>
 
-  <app-notification notificationBody="you are dying" quickFix="don't" minsAgo="100"></app-notification>
+  <p>New</p>
 
+  <app-notification notificationBody="The CO2 level is too high!" quickFix="Quick fix: Open the Window." minsAgo="1" [minsEmpty]=true></app-notification>
+
+  <app-notification notificationBody="You have now joined zone 1" minsAgo="4" [minsEmpty]=true></app-notification>
+
+  <app-notification notificationBody="Hi Farhana. You have signed in in classroom D3.16 London" [minsEmpty]=true minsAgo="5" [showButton]=true buttonContent="Confirmed"></app-notification>
+
+
+  <p>Previous</p>
   
+  <app-notification notificationBody="Hi Farhana. You have signed in in classroom D2.08 Paris" [minsEmpty]=false hoursAgo="24" [showButton]=true buttonContent="Confirmed"></app-notification>
 </ion-content>

@@ -45,11 +45,10 @@ ion-button{
 }
 
 ion-button::part(native){
-    background-color: black;
-    --background-activated: grey;
+    background-color: rgb(180, 180, 180);
+    --background-activated: rgb(180, 180, 180);
+    margin-top: 45px;
+    margin-left: 40px;
+    width: 90px;
 }
 
-.DenyBtn::part(native){
-    background-color: rgb(192, 192, 192);
-    --background-activated: rgb(231, 231, 231);
-}
