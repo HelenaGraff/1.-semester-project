@@ -19,4 +19,7 @@ ion-button::part(native){
 .closeButton {
     color: white;
     --background-activated: grey;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
