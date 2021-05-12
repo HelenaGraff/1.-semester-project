@@ -10,16 +10,22 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 export class LearnModalPage implements OnInit {
 
   responses = [
-  "I am tired",
-  "I am anxious",
-  
-  "I am sleepy",
-  " I feel dehydrated"
+
   ];
 
   answers = [
+  "I am tired",
+  "I am anxious",
+  "I am sleepy",
+  "I feel dehydrated"
    
   ];
+
+  correctAnswers = [
+    "I am tired",
+    "I am anxious",
+    "I am sleepy"
+    ];
 
 
   constructor(private modalController:ModalController) { }

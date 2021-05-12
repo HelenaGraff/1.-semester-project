@@ -9,7 +9,7 @@
       (cdkDropListDropped)="drop($event)">
       <h2> {{question}}</h2>
       <div  *ngFor="let item of answers" >
-        <ion-card class="answerBubble" >
+        <ion-card class="answerBubble" cdkDrag>
        
 
         {{item}}
@@ -29,7 +29,7 @@
       [cdkDropListData]="responses"
       
       (cdkDropListDropped)="drop($event)">
-      <H2>Your answer(s)</H2>
+      <H2>Your answer(s):</H2>
      
       <ion-card class="answerBubble" *ngFor="let item of responses" cdkDrag >{{item}}</ion-card>
     </ion-card>
