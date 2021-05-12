@@ -28,6 +28,25 @@ export class LearnModalPage implements OnInit {
     ];
 
 
+    responses1 = [
+
+    ];
+  
+    answers1 = [
+    "I am tired",
+    "I am anxious",
+    "I am sleepy",
+    "I feel dehydrated"
+     
+    ];
+  
+    correctAnswers1 = [
+      "I am tired",
+      "I am anxious",
+      "I am sleepy"
+      ];
+  
+
   constructor(private modalController:ModalController) { }
 
   ngOnInit() {
