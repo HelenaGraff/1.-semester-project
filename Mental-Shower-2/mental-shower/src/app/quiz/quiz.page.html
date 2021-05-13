@@ -12,8 +12,13 @@
 </ion-header>
 <ion-content>
 
+  <ion-card class="moodIntro"> 
+    <h2>
+      Please drag and drop from the list below how the system can help improve your mood<br>
+    </h2>
+</ion-card>
 
- <quiz-zone *ngIf="!responses1.includes('Not Good')" question="How are you doing today?" [answers]='answers1' [responses]='responses1'></quiz-zone>
+ <quiz-zone *ngIf="!responses1.includes('Not Good')" question="How are you feeling today?" [answers]='answers1' [responses]='responses1'></quiz-zone>
  <quiz-zone *ngIf="responses1.includes('Not Good')" question="What's up?" [answers]='answers2' [responses]='responses2'></quiz-zone>
  
  
@@ -36,11 +41,11 @@
 <ion-button class="proceedBtn" routerLink="/zones" *ngIf="
 responses2.includes('It smells bad') ||
 responses1.includes('Great')||
- responses2.includes('Wet') ||
- responses2.includes('Dry') ||
- responses2.includes('Headache') ||
- responses3.includes('Feeling hot') || 
- responses3.includes('Feeling cold') 
+ responses2.includes('I feel like it is wet') ||
+ responses2.includes('I feel like it is dry') ||
+ responses2.includes('I have a headache') ||
+ responses2.includes('Feeling hot') || 
+ responses2.includes('Feeling cold') 
 
  
  
