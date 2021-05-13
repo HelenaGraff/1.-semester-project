@@ -20,3 +20,11 @@ ion-button::part(native){
     background-color: black;
     --background-activated: grey;
 }
+
+.cardConnected {
+    --background: black;
+    --color:blue;
+    --width: 500px;
+    --end: 50%;
+    margin-left: 500px;;
+}
