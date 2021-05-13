@@ -5,5 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class CardServiceService {
 
+ public currentIdPath:string;
   constructor() { }
 }

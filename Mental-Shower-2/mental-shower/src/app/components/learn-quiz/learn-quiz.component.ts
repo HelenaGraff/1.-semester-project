@@ -15,7 +15,7 @@ export class LearnQuizComponent implements OnInit {
   @Input("answers") answers:string[];
   @Input("responses") responses:string[];
   @Input("correctAnswers") correctAnswers:string[];
-
+  @Input("cardClass") cardClass:string;
   success:boolean;
   dragDisabled:boolean;
 
@@ -42,9 +42,9 @@ export class LearnQuizComponent implements OnInit {
     console.log("correct answers:"+JSON.stringify (this.correctAnswers));
 
     if (JSON.stringify(this.responses.sort()) === JSON.stringify(this.correctAnswers.sort())){
-      
+      console.log("SUCCESS")
       this.success=true;
-      createAnimation().addElement(document.querySelector(".answerCard")).duration(500).iterations(1).keyframes([{offset:0,background:'white'},{offset:1,background:'#c2ff68'}]).play({sync:false})
+      createAnimation().addElement(document.querySelector("."+this.cardClass)).duration(500).iterations(1).keyframes([{offset:0,background:'white'},{offset:1,background:'#c2ff68'}]).play({sync:false})
     }
   }
 

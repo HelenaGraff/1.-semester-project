@@ -15,10 +15,10 @@ p{
     margin-left: 60px;
 }
 
-ion-button::part(native){
-    margin-left: 93px;
+ ion-button::part(native){
+   
     background-color: black;
-    --background-activated: grey;
+  --background-activated: grey;
 }
 
 .cardConnected {

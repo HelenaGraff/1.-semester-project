@@ -45,7 +45,7 @@ export class QuizPage implements OnInit {
  
 
   drop(event: CdkDragDrop<string[]>) {
-    console.log("event container data:"+event.container.data);
+    
     
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
