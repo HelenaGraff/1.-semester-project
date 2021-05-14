@@ -4,21 +4,22 @@
 
 .nearReaderImg{
     height: 70px;
-    margin-left: 125px;
+    margin-left: 135px;
 }
 
 p{
-    margin-left: 125px;
+    margin-left: 140px;
 }
 
 .Info{
-    margin-left: 60px;
+    margin-left: 70px;
 }
 
  ion-button::part(native){
    
     background-color: black;
   --background-activated: grey;
+  margin-left: 85px;
 }
 
 .cardConnected {
