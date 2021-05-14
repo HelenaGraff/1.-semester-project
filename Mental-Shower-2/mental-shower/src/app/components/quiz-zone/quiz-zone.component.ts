@@ -12,6 +12,7 @@ export class QuizZoneComponent implements OnInit {
   @Input("question") question:string;
   @Input("answers") answers:string[];
   @Input("responses") responses:string[];
+  
 
 dragDisabled:boolean;
   
