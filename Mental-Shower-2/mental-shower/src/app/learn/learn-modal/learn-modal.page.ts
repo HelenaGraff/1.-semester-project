@@ -135,8 +135,15 @@ this.modalController.dismiss();
     this.slides.slideNext();
     this.slides.lockSwipes(true);
     
-    this.firestoreService.create("testing",{testVar:"blablabal"});
-
+  //  this.firestoreService.create("testing",{testVar:"blablabal"});
+    var test=this.firestoreService.get("testing").subscribe((res)=>{
+     // console.log(res);
+      res.forEach((item)=>{
+        console.log(item.payload.doc.data());
+      })
+    });
+    
+ 
   }
 
  
