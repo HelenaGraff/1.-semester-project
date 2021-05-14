@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonSlide, IonSlides, ModalController } from '@ionic/angular';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-learn-modal',
@@ -85,26 +86,55 @@ export class LearnModalPage implements OnInit {
   ];
 
 /////////////////////////////////////////
+success1:boolean;
+success2:boolean;
+success3:boolean;
+success4:boolean;
 
-  constructor(private modalController:ModalController) { }
+
+
+
+
+
+
+
+
+
+@ViewChild("slides")slides:IonSlides;
+  constructor(private modalController:ModalController) { 
+    
+
+    
+  }
+
+  slideChange(){
+    console.log("slides moved");
+   
+  this.slides.getActiveIndex().then((x)=>{
+
+  })
+  }
 
   ngOnInit() {
+    
+   
+  }
 
+  ionViewWillEnter(){
+    this.slides.lockSwipes(true);
   }
   closeModal(){
     console.log("hello");
 this.modalController.dismiss();
   }
 
-  drop(event: CdkDragDrop<string[]>) {
-    if (event.previousContainer === event.container) {
-      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-    } else {
-      transferArrayItem(event.previousContainer.data,
-                        event.container.data,
-                        event.previousIndex,
-                        event.currentIndex);
-    }
+  successEventHappening(){
+    console.log("SUCCESS EVENT");
+    this.slides.lockSwipes(false);
+    this.slides.slideNext();
+    this.slides.lockSwipes(true);
   }
+
+ 
 
 }

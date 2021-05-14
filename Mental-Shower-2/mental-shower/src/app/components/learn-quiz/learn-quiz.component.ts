@@ -1,7 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import { JsonPipe } from '@angular/common';
 import {createAnimation, Animation} from '@ionic/core'
+import { EventEmitter }from '@angular/core';
 
 
 @Component({
@@ -16,7 +17,10 @@ export class LearnQuizComponent implements OnInit {
   @Input("responses") responses:string[];
   @Input("correctAnswers") correctAnswers:string[];
   @Input("cardClass") cardClass:string;
-  success:boolean;
+  @Input("success")success:boolean;
+
+
+  @Output("successEvent") successEvent=new EventEmitter();
   dragDisabled:boolean;
 
   constructor() { }
@@ -44,7 +48,10 @@ export class LearnQuizComponent implements OnInit {
     if (JSON.stringify(this.responses.sort()) === JSON.stringify(this.correctAnswers.sort())){
       console.log("SUCCESS")
       this.success=true;
-      createAnimation().addElement(document.querySelector("."+this.cardClass)).duration(500).iterations(1).keyframes([{offset:0,background:'white'},{offset:1,background:'#c2ff68'}]).play({sync:false})
+      createAnimation().addElement(document.querySelector("."+this.cardClass)).duration(500).iterations(1).keyframes([{offset:0,background:'white'},{offset:1,background:'#c2ff68'}]).play({sync:false}).then(()=>{
+        this.successEvent.emit("");
+      })
+   
     }
   }
 

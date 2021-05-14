@@ -9,26 +9,27 @@
 </ion-header>
 
 <ion-content>
-            <ion-slides>
-                      <ion-slide>
+            <ion-slides #slides id="quizSlides" (ionSlideWillChange)="slideChange()" >
+              <!--        <ion-slide>
                                     <ion-card>
                                 <img src="assets/windowOpen.gif">
                               </ion-card>
                   </ion-slide>
-                 <ion-slide> 
-<app-learn-quiz  cardClass="quiz1" question="How does CO2 affect your overall well-being?" [responses]="responses" [answers]="answers" [correctAnswers]="correctAnswers"> </app-learn-quiz>
+                -->
+                 <ion-slide active> 
+<app-learn-quiz [success]='success1'  (successEvent)="successEventHappening()"   cardClass="quiz1" question="How does CO2 affect your overall well-being?" [responses]="responses" [answers]="answers" [correctAnswers]="correctAnswers"> </app-learn-quiz>
                    </ion-slide> 
 
                   <ion-slide> 
-<app-learn-quiz cardClass="quiz2" question="How does temperature affect your well-being?" [responses]="responses1" [answers]="answers1" [correctAnswers]="correctAnswers1"> </app-learn-quiz>
+<app-learn-quiz [success]='success2' (successEvent)="successEventHappening()" cardClass="quiz2" question="How does temperature affect your well-being?" [responses]="responses1" [answers]="answers1" [correctAnswers]="correctAnswers1"> </app-learn-quiz>
                  </ion-slide> 
                  
                  <ion-slide>
-<app-learn-quiz cardClass="quiz3" question="How does humidity affect your well-being?" [responses]="responses2" [answers]="answers2" [correctAnswers]="correctAnswers2"> </app-learn-quiz>
+<app-learn-quiz [success]='success3' (successEvent)="successEventHappening()" cardClass="quiz3" question="How does humidity affect your well-being?" [responses]="responses2" [answers]="answers2" [correctAnswers]="correctAnswers2"> </app-learn-quiz>
                  </ion-slide>
                 
                  <ion-slide>
-<app-learn-quiz cardClass="quiz4" question="How does draught affect your well-being?" [responses]="responses3" [answers]="answers3" [correctAnswers]="correctAnswers3"> </app-learn-quiz>
+<app-learn-quiz [success]='success4' (successEvent)="successEventHappening()" cardClass="quiz4" question="How does draught affect your well-being?" [responses]="responses3" [answers]="answers3" [correctAnswers]="correctAnswers3"> </app-learn-quiz>
                  </ion-slide>
           </ion-slides>
 </ion-content>
