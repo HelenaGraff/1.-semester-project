@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonSlide, IonSlides, ModalController } from '@ionic/angular';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import {FirestoreCrudService} from 'src/app/services/firestore-crud.service';
 
 @Component({
   selector: 'app-learn-modal',
@@ -101,7 +102,7 @@ success4:boolean;
 
 
 @ViewChild("slides")slides:IonSlides;
-  constructor(private modalController:ModalController) { 
+  constructor(private modalController:ModalController, private firestoreService:FirestoreCrudService) { 
     
 
     
@@ -133,6 +134,9 @@ this.modalController.dismiss();
     this.slides.lockSwipes(false);
     this.slides.slideNext();
     this.slides.lockSwipes(true);
+    
+    this.firestoreService.create("testing",{testVar:"blablabal"});
+
   }
 
  
