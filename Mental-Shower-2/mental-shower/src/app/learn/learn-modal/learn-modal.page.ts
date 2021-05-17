@@ -55,7 +55,7 @@ export class LearnModalPage implements OnInit {
       ];
     
       answers2 = [
-      "My body's perception of heat is changing",
+      "I am coughing",
       "My lips are dry",
       "I am thirsty",
       "I m tired"
@@ -63,7 +63,7 @@ export class LearnModalPage implements OnInit {
       ];
     
       correctAnswers2 = [
-       "My body's perception of heat is changing",
+       "I am coughing",
        "My lips are dry",
        "I am thirsty",
       ];
