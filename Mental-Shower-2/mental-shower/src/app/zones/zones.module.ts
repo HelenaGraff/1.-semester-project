@@ -7,14 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ZonesPageRoutingModule } from './zones-routing.module';
 
 import { ZonesPage } from './zones.page';
+import { ZoneComponent} from 'src/app/components/zone/zone.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ZonesPageRoutingModule
+    ZonesPageRoutingModule    
   ],
-  declarations: [ZonesPage]
+  declarations: [ZonesPage, ZoneComponent]
 })
 export class ZonesPageModule {}
