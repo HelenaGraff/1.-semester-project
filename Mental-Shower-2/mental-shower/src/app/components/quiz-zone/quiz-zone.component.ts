@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+import { QuizServiceService } from 'src/app/services/quiz-service.service';
 
 
 @Component({
@@ -16,7 +17,7 @@ export class QuizZoneComponent implements OnInit {
 
 dragDisabled:boolean;
   
-  constructor() { }
+  constructor(public quizService:QuizServiceService) { }
 
   ngOnInit() {}
   
@@ -25,11 +26,35 @@ dragDisabled:boolean;
     console.log("event container item:"+event.item.element.nativeElement.textContent);
     
 
-    if  (event.item.element.nativeElement.textContent=="I feel like it is dry"){
-      this.dragDisabled=true;
-    }
+    console.log(this.responses);
+      if (this.responses.includes("Not Good")){
+        this.quizService.currentStudent.feelingGood=false;
+      }
+      if (this.responses.includes("Feeling hot")){
+        this.quizService.currentStudent.feelingHot=true;
+      }
+      if (this.responses.includes("Feeling cold")){
+        console.log("FEELING COLD");
+        this.quizService.currentStudent.feelingCold=true;
+      }
+      if (this.responses.includes("It smells bad")){
+        this.quizService.currentStudent.smelly=true;
+      }
+      if (this.responses.includes("I have a headache")){
+        this.quizService.currentStudent.headache=true;
+      }
+      if (this.responses.includes("I feel like it is wet")){
+        this.quizService.currentStudent.feelingWet=true;
+      }
+      if (this.responses.includes("I feel like it is dry")){
+        this.quizService.currentStudent.feelingDry=true;
+      }
 
     if (event.previousContainer === event.container) {
+
+
+      
+      
       
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {

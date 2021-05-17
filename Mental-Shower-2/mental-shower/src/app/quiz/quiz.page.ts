@@ -1,13 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+import {FirestoreCrudService} from 'src/app/services/firestore-crud.service';
+
+
+
+
+
+
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.page.html',
   styleUrls: ['./quiz.page.scss'],
 })
+
 export class QuizPage implements OnInit {
 
-  constructor() { 
+  constructor(firestore:FirestoreCrudService) { 
+
     
   }
 
@@ -57,3 +66,5 @@ export class QuizPage implements OnInit {
     }
   }
 }
+
+

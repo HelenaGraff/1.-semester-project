@@ -20,3 +20,26 @@
     width: 94%;
     
 }
+
+.countBadge{
+    position: absolute;
+    margin-top: -5px;
+    margin-left: 148px;
+    z-index: 1;
+    background-color: #6ea81a;
+ 
+}
+
+.badgeText{
+    display: inline-flex;
+    margin-left: 4px;
+    vertical-align: text-top;
+    display:inline-flex;
+}
+
+.matchPercentage{
+    color: #000000;
+    font-size: 38px;
+    margin-top: 40%;
+    margin-left: 30%;
+}

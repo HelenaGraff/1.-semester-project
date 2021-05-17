@@ -1,23 +1,15 @@
 <div class='zone-layout'>
-  <ion-card class='zone'>
+
   
-
+  <div *ngFor="let item of zones">
+    <ion-badge class="countBadge"> <ion-icon name="person" >  </ion-icon >  <div class="badgeText"> {{item.students.length}} </div>  </ion-badge>
+  <ion-card class='zone' >
+   
+    <div class="matchPercentage">{{item.matchPercentage}}</div>
+  <!--  <ion-icon class="studentIcon" *ngFor="let student of item.students"  name="person" style="width:30px;height:30px;"></ion-icon>-->
   </ion-card>
-
-  <ion-card class='zone'>
-  
-
-  </ion-card>
-
-  <ion-card class='zone'>
-  
-
-  </ion-card>
-
-  <ion-card class='zone'>
-  
-
-  </ion-card>
+  </div>
+ 
 
 </div>
 
