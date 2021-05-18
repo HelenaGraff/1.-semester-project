@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { AlertController } from '@ionic/angular';
 import { FirestoreCrudService } from 'src/app/services/firestore-crud.service';
 import { QuizServiceService } from 'src/app/services/quiz-service.service';
 
@@ -9,10 +11,11 @@ import { QuizServiceService } from 'src/app/services/quiz-service.service';
 })
 export class ZoneComponent implements OnInit {
 
+ 
 
   zones=[{zoneId:"1",students:new Array<student>(),matchPercentage:0},{zoneId:"2",students:new Array<student>(),matchPercentage:0},{zoneId:"3",students:new Array<student>(),matchPercentage:0},{zoneId:"4",students:new Array<student>(),matchPercentage:0}];
   students:student[];
-  constructor(firestore:FirestoreCrudService, quizService:QuizServiceService) { 
+  constructor(firestore:FirestoreCrudService, quizService:QuizServiceService,public sanitizer:DomSanitizer, public alertController:AlertController) { 
 
     firestore.get("student").subscribe(data=>{
       this.students=data.map(s=>{
@@ -83,8 +86,8 @@ foundStudents.push(student);
             matchPercentage-=100/6;
             matchingProperties++;
           }
-          zone.matchPercentage=Math.floor(matchPercentage);
-          
+          //zone.matchPercentage=Math.floor(matchPercentage);
+
           
         })
       })
@@ -94,9 +97,34 @@ foundStudents.push(student);
 
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.fillMatchFakeData();
+  }
+
+  async zoneJoin(){
+    console.log("click");
+   const alert=  this.alertController.create({
+      header:"Are you sure you want to join the zone?",
+      buttons:['Yes','No'],
+      cssClass:"zoneAlert",
+      
+      
+    });
+     (await alert).present();
+    
+    
+  }
+  fillMatchFakeData(){
+    this.zones.forEach(zone=>{
+      zone.matchPercentage=Math.floor(Math.random()*100);
+    })
+  }
+
 
 }
+
+
+
 
 
 interface student{
