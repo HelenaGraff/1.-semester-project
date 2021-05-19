@@ -127,6 +127,20 @@ ion-item.selected {
 .button-inner{
   color:black;
 }
+:root {
+  --ion-color-logogreen: #6EA81A;
+  --ion-color-logogreen-rgb: 110,168,26;
+  --ion-color-logogreen-contrast: #000000;
+  --ion-color-logogreen-contrast-rgb: 0,0,0;
+  --ion-color-logogreen-shade: #619417;
+  --ion-color-logogreen-tint: #7db131;
+}
 
-
-
+.ion-color-logogreen {
+  --ion-color-base: var(--ion-color-logogreen);
+  --ion-color-base-rgb: var(--ion-color-logogreen-rgb);
+  --ion-color-contrast: var(--ion-color-logogreen-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-logogreen-contrast-rgb);
+  --ion-color-shade: var(--ion-color-logogreen-shade);
+  --ion-color-tint: var(--ion-color-logogreen-tint);
+}

@@ -20,6 +20,12 @@
     cursor: default;
   }
   
+  .wrongAnswer{
+--background: red !important;
+background: red !important;
+background-color: red !important;
+  }
+
   h2{
       margin-left: 5%;
       font-size: 20px;
@@ -34,3 +40,6 @@
     background-color:#6EA81A;
   
   }
+
+
+   

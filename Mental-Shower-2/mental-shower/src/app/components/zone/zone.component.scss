@@ -53,3 +53,44 @@
 ion-alert{
     --ion-background-color:red;
 }
+.zoneTitle{
+    font-size: 16px;
+    margin-left: 5%;
+    margin-top: 7%;
+    color:black;
+}
+
+ /////////////////////////////ANIMATION SHIT////////////////////////////////
+ .animLine {
+
+    margin-left: 19%;
+    margin-top: 4%;
+    height: 95%;
+    width: 94%;
+   
+    
+  
+   
+   
+   --angle {
+        syntax: '<angle>';
+        initial-value: 0deg;
+        inherits: false;
+      }
+    border: 5px solid;
+    border-image: linear-gradient(var(--angle), green, yellow) 1 !important;
+    
+    animation: myAnimation 1s ease infinite;
+  }
+
+  @keyframes myAnimation {
+   100%{
+      --angle: 360deg;
+    }
+  }
+  
+  
+  
+ 
+
+  

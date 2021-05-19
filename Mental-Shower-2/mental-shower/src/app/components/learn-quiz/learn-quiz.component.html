@@ -32,7 +32,7 @@
       (cdkDropListDropped)="drop($event)">
       <H2>Your answer(s):</H2>
      
-      <ion-card class="answerBubble" *ngFor="let item of responses" cdkDrag >{{item}}</ion-card>
+      <ion-card class="answerBubble" *ngFor="let item of responses" cdkDrag #answer>{{item}}</ion-card>
       <audio *ngIf="success" autoplay src="assets/success.mp3" ></audio>
     </ion-card>
   </div>

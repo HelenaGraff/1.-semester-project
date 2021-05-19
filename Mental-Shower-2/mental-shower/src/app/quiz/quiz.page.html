@@ -12,11 +12,13 @@
 </ion-header>
 <ion-content>
 
+<div>
   <ion-card class="moodIntro"> 
     <h2>
       Please drag and drop from the list below how the system can help improve your mood<br>
     </h2>
 </ion-card>
+</div>
 
  <quiz-zone *ngIf="!responses1.includes('Not Good')" question="How are you feeling today?" [answers]='answers1' [responses]='responses1'></quiz-zone>
  <quiz-zone *ngIf="responses1.includes('Not Good')" question="What's up?" [answers]='answers2' [responses]='responses2'></quiz-zone>

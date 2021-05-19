@@ -15,6 +15,23 @@ align-content: center;
 ion-button::part(native){
     background-color: black;
 }
+.moodIntro {
+
+    font-weight: bold;
+    display:flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: -2%;
+}
+
+h2{
+    font-size: medium;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-weight: bold;
+    text-align: center;
+}
 
 .closeButton {
     color: white;

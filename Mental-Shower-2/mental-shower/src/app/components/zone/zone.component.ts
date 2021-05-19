@@ -16,7 +16,7 @@ export class ZoneComponent implements OnInit {
   zones=[{zoneId:"1",students:new Array<student>(),matchPercentage:0},{zoneId:"2",students:new Array<student>(),matchPercentage:0},{zoneId:"3",students:new Array<student>(),matchPercentage:0},{zoneId:"4",students:new Array<student>(),matchPercentage:0}];
   students:student[];
   constructor(firestore:FirestoreCrudService, quizService:QuizServiceService,public sanitizer:DomSanitizer, public alertController:AlertController) { 
-
+    
     firestore.get("student").subscribe(data=>{
       this.students=data.map(s=>{
         
@@ -97,6 +97,17 @@ foundStudents.push(student);
 
   }
 
+  public max():any
+  {
+    var max=this.zones[0];
+    this.zones.forEach(zone=>{
+      if (max.matchPercentage<zone.matchPercentage){
+        max=zone;
+      }
+    })
+    return max;
+  }
+
   ngOnInit() {
     this.fillMatchFakeData();
   }
@@ -118,6 +129,25 @@ foundStudents.push(student);
     this.zones.forEach(zone=>{
       zone.matchPercentage=Math.floor(Math.random()*100);
     })
+  }
+
+  public isBiggestMatch(index:number):boolean{
+
+   try {
+   this.zones.forEach(zone => {
+      if (zone[index].matchPercentage<zone.matchPercentage){
+        return false;
+      }
+     
+    });
+    return true;
+
+  }
+  catch{
+
+  }
+  
+    
   }
 
 
