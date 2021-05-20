@@ -44,7 +44,7 @@
     color: black;
     
     font-size: 38px;
-    margin-top: 40%;
+    margin-top: 24%;
     margin-left: 30%;
 }
 .zoneAlert{
@@ -60,6 +60,13 @@ ion-alert{
     color:black;
 }
 
+.bestMatch{
+float:right;
+margin-right:15px;
+color:black;
+font-weight: bold;
+}
+
  /////////////////////////////ANIMATION SHIT////////////////////////////////
  .animLine {
 
@@ -72,20 +79,17 @@ ion-alert{
   
    
    
-   --angle {
-        syntax: '<angle>';
-        initial-value: 0deg;
-        inherits: false;
-      }
-    border: 5px solid;
-    border-image: linear-gradient(var(--angle), green, yellow) 1 !important;
+   
     
-    animation: myAnimation 1s ease infinite;
+    animation: myAnimation 2s ease infinite;
   }
 
   @keyframes myAnimation {
-   100%{
-      --angle: 360deg;
+   50%{
+      transform: scale(1.1);
+    }
+    100%{
+        transform:scale(1);
     }
   }
   

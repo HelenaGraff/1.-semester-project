@@ -6,7 +6,7 @@ img {
     border: 0;
     margin-top: 360px;
 }
-ion-card{
+dashboard{
     height: 200px;
     padding-top: 5%;
     margin-bottom: 40px;
@@ -18,4 +18,12 @@ ion-card-header{
     font-size: large;
     font-weight: bold;
     
+}
+
+.joinTip{
+    height: 100px;
+    display:flex;
+    align-items: center;
+    font-size: 18px ;
+    justify-content: center;
 }
