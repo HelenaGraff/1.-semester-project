@@ -65,28 +65,28 @@ foundStudents.push(student);
 
           let matchPercentage:number=100;
           let matchingProperties=0;
-          if (student.feelingCold && quizService.currentStudent.feelingCold){
+          if (student.feelingCold ==quizService.currentStudent.feelingCold){
             console.log("yea");
             matchPercentage-=100/6;
             matchingProperties++;
           }
-          if (student.feelingHot && quizService.currentStudent.feelingHot){
+          if (student.feelingHot ==quizService.currentStudent.feelingHot){
             matchPercentage-=100/6;
             matchingProperties++;
           }
-          if (student.feelingDry && quizService.currentStudent.feelingDry){
+          if (student.feelingDry == quizService.currentStudent.feelingDry){
             matchPercentage-=100/6;
             matchingProperties++;
           }
-          if (student.feelingWet && quizService.currentStudent.feelingWet){
+          if (student.feelingWet == quizService.currentStudent.feelingWet){
             matchPercentage-=100/6;
             matchingProperties++;
           }
-          if (student.headache && quizService.currentStudent.headache){
+          if (student.headache == quizService.currentStudent.headache){
             matchPercentage-=100/6;
             matchingProperties++;
           }
-          if (student.smelly && quizService.currentStudent.smelly){
+          if (student.smelly == quizService.currentStudent.smelly){
             matchPercentage-=100/6;
             matchingProperties++;
           }
