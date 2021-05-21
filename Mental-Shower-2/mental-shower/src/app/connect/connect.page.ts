@@ -22,7 +22,7 @@ export class ConnectPage implements OnInit {
 
   async presentToast() {
     const toast = await this.toastController.create({
-      message: 'Connected successfully',
+      message: 'Connected successfully!',
       duration: 2000,
       cssClass: 'cardConnected',
     });

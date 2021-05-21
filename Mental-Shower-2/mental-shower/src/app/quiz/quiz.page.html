@@ -38,7 +38,9 @@
   <ion-button *ngIf="responses3.includes('Feeling hot')"class="proceedBtn">Continue to zones</ion-button>
   <ion-button *ngIf="responses3.includes('Feeling cold')"class="proceedBtn">Continue to zones</ion-button>
   <ion-button *ngIf="responses3.includes('Feeling okay')"class="proceedBtn">Continue to zones</ion-button>
------>                                                                                                                
+----->        
+
+<p class="joinTip" *ngIf="responses2.length>0 || responses1.includes('Great')"> The system will adjust to your preferences and will assign you to the best matching zone.<br>  All you have to do is to press on the zone to join it!</p>
 
 <ion-button class="proceedBtn" routerLink="/zones" *ngIf="
 responses2.includes('It smells bad') ||

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpServiceService} from 'src/app/services/http-service.service'
 import { FirestoreCrudService } from '../services/firestore-crud.service';
+import { AlertController, IonCard, ToastController } from '@ionic/angular';
 @Component({
   selector: 'app-zones',
   templateUrl: './zones.page.html',
@@ -8,13 +9,14 @@ import { FirestoreCrudService } from '../services/firestore-crud.service';
 })
 export class ZonesPage implements OnInit {
 
-  constructor(private httpService:HttpServiceService,firestore:FirestoreCrudService) { 
+  constructor(private httpService:HttpServiceService,firestore:FirestoreCrudService, public toastController: ToastController) { 
     
 
 
 
 
   }
+
    temperature:number;
    forecast:string;
    humidity:number;
@@ -40,3 +42,4 @@ interface student{
  zoneId:string,
 
 }
+
