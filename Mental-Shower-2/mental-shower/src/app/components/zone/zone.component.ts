@@ -1,6 +1,6 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { AlertController } from '@ionic/angular';
+import { AlertController, ToastController } from '@ionic/angular';
 import { FirestoreCrudService } from 'src/app/services/firestore-crud.service';
 import { QuizServiceService } from 'src/app/services/quiz-service.service';
 
@@ -15,7 +15,7 @@ export class ZoneComponent implements OnInit {
 
   zones=[{zoneId:"1",students:new Array<student>(),matchPercentage:0},{zoneId:"2",students:new Array<student>(),matchPercentage:0},{zoneId:"3",students:new Array<student>(),matchPercentage:0},{zoneId:"4",students:new Array<student>(),matchPercentage:0}];
   students:student[];
-  constructor(firestore:FirestoreCrudService, quizService:QuizServiceService,public sanitizer:DomSanitizer, public alertController:AlertController) { 
+  constructor(firestore:FirestoreCrudService, quizService:QuizServiceService,public sanitizer:DomSanitizer, public alertController:AlertController, public toastController:ToastController) { 
     
     firestore.get("student").subscribe(data=>{
       this.students=data.map(s=>{
@@ -118,10 +118,13 @@ foundStudents.push(student);
       header:"Are you sure you want to join the zone?",
       buttons:['Yes','No'],
       cssClass:"zoneAlert",
+
+
       
       
     });
-     (await alert).present();
+    
+    this.presentToastGreen();
     
     
   }
@@ -149,7 +152,15 @@ foundStudents.push(student);
   
     
   }
-
+  async presentToastGreen(){
+    const toast=this.toastController.create({
+      message:"Zone successfully joined",  
+      cssClass:"ZoneJoined",
+      duration:500
+    });
+     (await toast).present();
+     
+  }
 
 }
 
