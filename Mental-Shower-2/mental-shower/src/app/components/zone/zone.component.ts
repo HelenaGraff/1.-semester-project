@@ -1,6 +1,7 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { AlertController, ToastController } from '@ionic/angular';
+
 import { FirestoreCrudService } from 'src/app/services/firestore-crud.service';
 import { QuizServiceService } from 'src/app/services/quiz-service.service';
 
@@ -53,8 +54,11 @@ foundStudents.push(student);
 
       });
 
+     
 
       this.zones.forEach(zone=>{
+        let totalMatchPercentage:number;
+        totalMatchPercentage=0;
         zone.students.forEach(student=>{
 
           console.log(quizService.currentStudent.feelingCold);
@@ -86,10 +90,14 @@ foundStudents.push(student);
             matchPercentage-=100/6;
             matchingProperties++;
           }
+          totalMatchPercentage+=(matchingProperties/6)*100
           //zone.matchPercentage=Math.floor(matchPercentage);
 
           
         })
+
+        totalMatchPercentage/=zone.students.length;
+        zone.matchPercentage=Math.floor(totalMatchPercentage);
       })
      
     })
