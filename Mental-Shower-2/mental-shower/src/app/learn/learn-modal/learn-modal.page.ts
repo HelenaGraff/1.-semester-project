@@ -134,6 +134,7 @@ this.modalController.dismiss();
     this.slides.lockSwipes(false);
     this.slides.slideNext();
     this.slides.lockSwipes(true);
+
     
   //  this.firestoreService.create("testing",{testVar:"blablabal"});
     var test=this.firestoreService.get("testing").subscribe((res)=>{
@@ -145,7 +146,12 @@ this.modalController.dismiss();
     
  
   }
-
- 
+  finalSuccess(){
+    console.log("FINAL EVENT");
+    this.success4 = true;
+  }
+ Proceed(){
+   this.closeModal();
+ }
 
 }
