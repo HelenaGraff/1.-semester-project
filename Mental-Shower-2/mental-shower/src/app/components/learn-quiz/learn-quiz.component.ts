@@ -106,7 +106,6 @@ export class LearnQuizComponent implements OnInit {
     const toast=this.toastController.create({
       message:"This answer is correct!",  
       cssClass:"wrongAnswer",
-      color:"success",
       duration:500
     });
      (await toast).present();

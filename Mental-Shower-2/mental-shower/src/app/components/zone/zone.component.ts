@@ -154,7 +154,7 @@ foundStudents.push(student);
   }
   async presentToastGreen(){
     const toast=this.toastController.create({
-      message:"Zone successfully joined",  
+      message:"Zone successfully joined!",  
       cssClass:"ZoneJoined",
       duration:500
     });

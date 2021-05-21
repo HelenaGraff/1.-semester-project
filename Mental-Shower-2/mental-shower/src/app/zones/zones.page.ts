@@ -17,17 +17,6 @@ export class ZonesPage implements OnInit {
 
   }
 
-  async presentToastGreen(){
-    const toast=this.toastController.create({
-      message:"Zone successfully joined!",  
-      cssClass:"ZoneJoined",
-      color:"success",
-      duration:500
-    });
-     (await toast).present();
-     
-     
-  }
    temperature:number;
    forecast:string;
    humidity:number;
