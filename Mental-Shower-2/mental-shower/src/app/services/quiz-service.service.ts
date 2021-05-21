@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class QuizServiceService {
 
-  public currentStudent:student={};
+  public currentStudent:student={id:"testId",feelingCold:false,feelingHot:false,feelingWet:false,feelingDry:false,
+feelingGood:false,smelly:false,headache:false};
   constructor() { }
 }
 

@@ -8,7 +8,7 @@
   
   
       
-      <ion-card (click)="zoneJoin()" *ngIf="max().matchPercentage==zones[i].matchPercentage" class='animLine' [ngStyle]="{'background-color':'rgba(110,168,24,'+item.matchPercentage/100+')'}" >
+      <ion-card (click)="zoneJoin(i+1)" *ngIf="max().matchPercentage==zones[i].matchPercentage" class='animLine' [ngStyle]="{'background-color':'rgba(110,168,24,'+item.matchPercentage/100+')'}" >
     <ion-card-subtitle class="zoneTitle">Zone {{i+1}}</ion-card-subtitle>
     
     <div  class="matchPercentage" >{{item.matchPercentage}}%</div>  
@@ -17,7 +17,7 @@
   <!--  <ion-icon class="studentIcon" *ngFor="let student of item.students"  name="person" style="width:30px;height:30px;"></ion-icon>-->
   </ion-card>
 
-  <ion-card (click)="zoneJoin()" *ngIf="!(max().matchPercentage==zones[i].matchPercentage)" class='zone' [ngStyle]="{'background-color':'rgba(110,168,24,'+item.matchPercentage/100+')'}" >
+  <ion-card (click)="zoneJoin(i+1)" *ngIf="!(max().matchPercentage==zones[i].matchPercentage)" class='zone' [ngStyle]="{'background-color':'rgba(110,168,24,'+item.matchPercentage/100+')'}" >
     <ion-card-subtitle class="zoneTitle">Zone {{i+1}}</ion-card-subtitle>
    
     <div  class="matchPercentage" >{{item.matchPercentage}}%</div>  

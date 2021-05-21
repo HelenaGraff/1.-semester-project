@@ -24,4 +24,8 @@ export class FirestoreCrudService {
     this.firestore.collection(collectionName).doc(id).delete();
   }
 
+  createWithId(collectionName,id,something){
+    return this.firestore.collection(collectionName).doc(id).set(something);
+  }
+
 }

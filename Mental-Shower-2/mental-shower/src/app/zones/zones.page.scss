@@ -21,9 +21,17 @@ ion-card-header{
 }
 
 .joinTip{
-    height: 100px;
-    display:flex;
-    align-items: center;
-    font-size: 18px ;
-    justify-content: center;
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Title Title"
+    ". Tip";
 }
+
+.Title { grid-area: Title;
+font-size: 16px;
+justify-content: center;
+margin-left: 10%; }
+.Tip { grid-area: Tip; }

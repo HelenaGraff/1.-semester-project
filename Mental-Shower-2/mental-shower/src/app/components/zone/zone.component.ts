@@ -15,7 +15,7 @@ export class ZoneComponent implements OnInit {
 
   zones=[{zoneId:"1",students:new Array<student>(),matchPercentage:0},{zoneId:"2",students:new Array<student>(),matchPercentage:0},{zoneId:"3",students:new Array<student>(),matchPercentage:0},{zoneId:"4",students:new Array<student>(),matchPercentage:0}];
   students:student[];
-  constructor(firestore:FirestoreCrudService, quizService:QuizServiceService,public sanitizer:DomSanitizer, public alertController:AlertController) { 
+  constructor(public firestore:FirestoreCrudService, public quizService:QuizServiceService,public sanitizer:DomSanitizer, public alertController:AlertController) { 
     
     firestore.get("student").subscribe(data=>{
       this.students=data.map(s=>{
@@ -112,16 +112,34 @@ foundStudents.push(student);
     this.fillMatchFakeData();
   }
 
-  async zoneJoin(){
+  async zoneJoin(index:any){
     console.log("click");
-   const alert=  this.alertController.create({
-      header:"Are you sure you want to join the zone?",
-      buttons:['Yes','No'],
-      cssClass:"zoneAlert",
+  // const alert=  this.alertController.create({
+ //     header:"Are you sure you want to join the zone?",
+ //     buttons:['Yes','No'],
+ //     cssClass:"zoneAlert",
       
       
-    });
-     (await alert).present();
+ //   });
+  //   (await alert).present();
+  console.log(this.quizService.currentStudent);
+  this.quizService.currentStudent.zoneId=index;
+
+
+  (this.firestore.getWithId("student",this.quizService.currentStudent.id).subscribe(data=>{
+     var fin=data as student;
+     console.log(fin);
+     if (fin==undefined){
+     this.firestore.createWithId("student",this.quizService.currentStudent.id,this.quizService.currentStudent);
+     console.log("new");
+     }
+     else{
+      console.log("updating");
+      this.firestore.update("student",this.quizService.currentStudent.id,this.quizService.currentStudent) ;}
+     }
+  ))
+
+  
     
     
   }
