@@ -14,7 +14,7 @@
 <ion-content>
 
   <div>
-    <ion-button *ngIf="cardPath==null" routerLink="/card">Select a card</ion-button>
+    <ion-button style="margin-top: 15%;" *ngIf="cardPath==null" routerLink="/card">Select a card</ion-button>
     <img class="card" style="max-width: 90%; margin-left: 5%; margin-top: 10%;" [src]="cardPath" routerLink="/card">
     <p>Ready to scan</p> 
     <img class="nearReaderImg" src="assets/NearReader.png" alt="" (click)="presentToast()">
